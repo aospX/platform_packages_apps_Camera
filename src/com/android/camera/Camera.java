@@ -2009,6 +2009,7 @@ public class Camera extends ActivityBase implements FocusManager.Listener,
         mCameraDevice.setParameters(mParameters);
 
         if (mSnapshotOnIdle) {
+            mSnapshotOnIdle = false;
             mHandler.post(mDoSnapRunnable);
         }
     }
